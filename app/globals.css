@@ -25,3 +25,96 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  min-height: 100vh;
+  background: #333;
+  padding: 20px;
+}
+
+.images div {
+  width: 200px;
+  height: 200px;
+  background-color: #444;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.prompt {
+  border: 3px solid #444;
+  background: #555;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input,
+button {
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+input {
+  flex: 1;
+  outline: none;
+  background-color: #444;
+}
+
+button {
+  width: 20%;
+  background-color: #666;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 0px;
+  box-sizing: border-box;
+  border: 13px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
